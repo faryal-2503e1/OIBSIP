@@ -1,8 +1,4 @@
 
-/* Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-
-/* Basic Styling */
 * {
     margin: 0;
     padding: 0;
@@ -10,111 +6,172 @@
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #f5edff, #e6d5ff);
     min-height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    font-family: 'Poppins', Arial, sans-serif;
+
+    background-image: url("./images/bg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 30px 20px;
 }
 
 /* Main Container */
 .container {
-    background-color: white;
     width: 100%;
-    max-width: 430px;
+    max-width: 750px;
     padding: 35px;
-    border-radius: 20px;
-    box-shadow: 0 10px 35px rgba(91, 45, 140, 0.15);
+
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(12px);
+
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    border-radius: 25px;
+
+    box-shadow: 0 15px 40px rgba(90, 40, 180, 0.2);
+}
+
+.sub-container {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.sub-container > div:first-child {
+    flex: 0 0 180px;
+}
+
+.sub-container > div:last-child {
+    flex: 1;
+    min-width: 0;
 }
 
 /* Heading */
 h1 {
-    color: #663399;
-    font-size: 26px;
     text-align: center;
-    margin-bottom: 30px;
+    font-size: 32px;
+    color: #5425b8;
+    margin-bottom: 35px;
+    font-weight: 700;
 }
 
 /* Labels */
 label {
     display: block;
-    color: #444;
-    font-size: 14px;
-    font-weight: 500;
-    margin-bottom: 8px;
+    font-size: 17px;
+    font-weight: 600;
+    color: #30205e;
+    margin-bottom: 10px;
 }
 
-/* Input and Dropdown */
+.thermometer {
+    width: 180px;
+    height: auto;
+}
+
+/* Input and Select */
 input,
 select {
     width: 100%;
-    padding: 13px;
-    margin-bottom: 20px;
-    border: 1px solid #d8c5ee;
-    border-radius: 10px;
+    padding: 14px 16px;
+    margin-bottom: 25px;
+
+    font-size: 16px;
+    color: #30205e;
+
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid #cbb4ff;
+    border-radius: 12px;
+
     outline: none;
-    font-family: inherit;
-    font-size: 14px;
-    background-color: #fcfaff;
     transition: 0.3s;
 }
 
 /* Focus Effect */
 input:focus,
 select:focus {
-    border-color: #8954c7;
-    box-shadow: 0 0 6px rgba(137, 84, 199, 0.2);
+    border-color: #8547ed;
+    box-shadow: 0 0 10px rgba(133, 71, 237, 0.2);
 }
 
 /* Convert Button */
 button {
-    width: 100%;
-    padding: 13px;
-    background-color: #7845a8;
-    color: white;
+    display: block;
+    width: 75%;
+    margin: 5px auto 25px;
+
+    padding: 15px;
     border: none;
-    border-radius: 10px;
-    font-size: 16px;
-    font-weight: 600;
-    font-family: inherit;
+    border-radius: 30px;
+
+    background: linear-gradient(
+        90deg,
+        #7838ed,
+        #a45cf5
+    );
+
+    color: white;
+    font-size: 19px;
+    font-weight: bold;
+
     cursor: pointer;
+    box-shadow: 0 7px 18px rgba(110, 55, 210, 0.3);
     transition: 0.3s;
 }
 
 button:hover {
-    background-color: #60348b;
-    transform: translateY(-2px);
+    transform: translateY(-3px);
+    background: linear-gradient(
+        90deg,
+        #6325d5,
+        #9143ed
+    );
+    box-shadow: 0 10px 22px rgba(110, 55, 210, 0.4);
 }
 
-/* Result */
+/* Result Section */
 #result {
-    margin-top: 25px;
-    padding: 15px;
-    background-color: #f5edff;
-    color: #663399;
-    border-radius: 10px;
+    padding: 20px;
     text-align: center;
-    font-size: 15px;
+
+    font-size: 19px;
     font-weight: 600;
-    overflow-wrap: anywhere;
+    color: #5425b8;
+
+    background: rgba(224, 203, 255, 0.5);
+    border: 2px solid #c69aff;
+    border-radius: 15px;
 }
 
-#result p {
-    margin: 8px 0;
-    padding: 8px;
-    background-color: white;
-    border-radius: 8px;
-}
+/* Responsive Design */
+@media (max-width: 600px) {
 
-/* Mobile Responsive */
-@media (max-width: 480px) {
     .container {
         padding: 25px 20px;
     }
 
     h1 {
-        font-size: 22px;
+        font-size: 25px;
+        margin-bottom: 25px;
+    }
+
+    .sub-container {
+        flex-direction: column;
+    }
+
+    .thermometer {
+        width: 130px;
+    }
+
+    .sub-container > div {
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
     }
 }

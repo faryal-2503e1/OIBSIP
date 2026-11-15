@@ -1,35 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Temperature Converter</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
-    
-<div class="container">
+<body>
 
     <h1>Temperature Converter</h1>
 
-    <label>Enter Temperature:</label>
-    <input type="number" id="temperature" placeholder="Enter value">
+    <div class="container">
+        <div class="sub-container">
+            <div>
+                <img src="images/thermometer.png" class="thermometer" alt="Blue Thermometer">
+            </div>
+            <div>
+                <label>Enter Temperature:</label>
+                <input type="number" id="temperature" placeholder="Enter value">
 
-    <label>From:</label>
-    <select id="fromUnit">
-        <option value="Celsius">Celsius</option>
-        <option value="Fahrenheit">Fahrenheit</option>
-        <option value="Kelvin">Kelvin</option>
-    </select>
+                <label>From:</label>
+                <select id="fromUnit">
+                    <option value="Celsius">Celsius</option>
+                    <option value="Fahrenheit">Fahrenheit</option>
+                    <option value="Kelvin">Kelvin</option>
+                </select>
 
-    <button id="convertBtn">Convert</button>
+                <button id="convertBtn">Convert</button>
+            </div>
+        </div>
 
-    <div id="result">Result will appear here</div>
+        <div id="result">Result will appear here</div>
 
-</div>
+
+    </div>
 
 
     <script src="script.js"></script>
 </body>
+
 </html>
