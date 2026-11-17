@@ -23,7 +23,7 @@
 <body>
   <header>
 
-   <a href="index.html" class="nav-logo">
+    <a href="index.html" class="nav-logo">
       <img src="images/logo.png" alt="">
     </a>
     <div class="nav_menu">
@@ -88,21 +88,24 @@
     </section>
 
     <section>
-      <form id="contact" name="contact" method="POST" data-netlify="true">
-  <input type="hidden" name="form-name" value="contact">
+
+      <form id="contact" action="https://formspree.io/f/mqadvgky" method="POST">
 
         <h2>Contact Form</h2>
+
         <div class="container">
 
-          <input type="text" name="user_name" id="name" placeholder="Enter Your Name" title="Please fill this field"
-            required><br>
-          <input type="email" name="email" id="email" placeholder="Enter Your Email" title="Please fill this field"
-            required><br>
-          <textarea name="user_message" cols="62" rows="8" spellcheck="" placeholder="Enter your message"
-            title="Please fill this field" required></textarea>
+          <input type="text" name="name" id="name" placeholder="Enter Your Name" required><br>
+
+          <input type="email" name="email" id="email" placeholder="Enter Your Email" required><br>
+
+          <textarea name="message" cols="62" rows="8" placeholder="Enter your message" required></textarea>
+
           <input type="submit" value="SUBMIT" class="btn" id="submit">
+
         </div>
       </form>
+
     </section>
 
   </main>

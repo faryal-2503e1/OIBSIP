@@ -7,9 +7,17 @@ Temperature Converter is a simple and responsive web application that converts t
 https://webdev-l1-temperatureconverter.netlify.app
 
 ## Screenshots
+
+### Result (100 °C)
 ![Result](screenshots/temperature-converter-result.png)
-![Empty Input Validation](screenshots/empty-input-validation.png)
-![Absolute Zero Validation](screenshots/absolute-zero-validation.png)
+
+### Empty input
+![Empty input validation](screenshots/empty-input-validation.png)
+
+### Below absolute zero
+![Celsius error](screenshots/absolute-zero-celsius.png)
+![Fahrenheit error](screenshots/absolute-zero-fahrenheit.png)
+![Kelvin error](screenshots/absolute-zero-kelvin.png)
 
 ## Features
 - Convert Celsius to Fahrenheit.

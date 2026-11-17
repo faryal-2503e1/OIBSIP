@@ -31,20 +31,23 @@ convertBtn.addEventListener("click", function () {
         return;
     }
 
-    // Pehle sab ko Celsius mein badalna
-    var celsius;
-    
+     // Teeno values ke naam
+    var celsius, fahrenheit, kelvin;
+
+    // Jis unit mein user ne likha, uske hisaab se baqi nikalna
     if (from === "Celsius") {
         celsius = temp;
+        fahrenheit = temp * 9 / 5 + 32;
+        kelvin = temp + 273.15;
     } else if (from === "Fahrenheit") {
         celsius = (temp - 32) * 5 / 9;
+        fahrenheit = temp;
+        kelvin = (temp - 32) * 5 / 9 + 273.15;
     } else {
         celsius = temp - 273.15;
+        fahrenheit = (temp - 273.15) * 9 / 5 + 32;
+        kelvin = temp;
     }
-
-    // Celsius se baqi units nikalna
-    var fahrenheit = celsius * 9 / 5 + 32;
-    var kelvin = celsius + 273.15;
 
     // Result dikhana
     result.innerHTML =
